@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WEATHER / ONE</title>
+<meta name="description" content="一頁看完今天的天氣：現在幾度、接下來 12 小時、出門該穿什麼。黑白線條設計，沒有廣告、不用註冊。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WEATHER / ONE">
+<meta property="og:description" content="一頁看完今天的天氣：現在幾度、接下來 12 小時、出門該穿什麼。">
+<meta property="og:url" content="https://jjptt1980.github.io/weather-one-beta/">
+<meta property="og:image" content="https://jjptt1980.github.io/weather-one-beta/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<style>
+  :root { --fg: #000; --fg2: #5c5c5c; --line: #d9d9d9; --bg: #fff; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: "Inter", -apple-system, "Helvetica Neue", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.6; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  header { display: flex; align-items: center; gap: 10px; padding: 18px 0; border-bottom: 1px solid var(--fg); }
+  header img { width: 28px; height: 31px; }
+  header b { font-weight: 500; letter-spacing: .16em; font-size: 15px; }
+  header a { margin-left: auto; color: var(--fg); font-size: 14px; text-decoration: none; border: 1px solid var(--fg); padding: 6px 12px; }
+
+  .hero { position: relative; margin: 0 -16px; }
+  .hero img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 88% 50%; }
+  .intro { padding: 8px 16px 32px; }
+  h1 { font-size: clamp(24px, 7vw, 44px); font-weight: 500; letter-spacing: .1em; margin: 0; line-height: 1.15; white-space: nowrap; }
+  .sub { font-size: 11px; letter-spacing: .24em; color: var(--fg2); margin-top: 8px; }
+  .tag { font-size: clamp(20px, 5.4vw, 28px); font-weight: 600; margin: 28px 0 4px; line-height: 1.4; }
+  .tag2 { font-size: 16px; margin: 0; }
+  .cta { display: inline-block; margin-top: 28px; background: var(--fg); color: var(--bg); text-decoration: none;
+    font-size: 17px; letter-spacing: .06em; padding: 16px 28px; }
+  .note { font-size: 13px; color: var(--fg2); margin-top: 12px; }
+
+  section { border-top: 1px solid var(--fg); padding: 28px 0 36px; }
+  h2 { font-size: 13px; letter-spacing: .24em; font-weight: 500; margin: 0 0 20px; }
+  h2 span { color: var(--fg2); margin-right: 10px; }
+  .features { list-style: none; margin: 0; padding: 0; }
+  .features li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .features li:last-child { border-bottom: 0; }
+  .features b { display: block; font-size: 17px; }
+  .features p { margin: 4px 0 0; color: var(--fg2); font-size: 15px; }
+  .shot { display: block; width: min(320px, 80%); margin: 0 auto; border: 1px solid var(--fg); }
+  .steps { margin: 0; padding-left: 20px; }
+  .steps li { margin-bottom: 8px; }
+  .steps a { color: var(--fg); }
+  footer { border-top: 1px solid var(--fg); padding: 24px 0 40px; font-size: 12px; color: var(--fg2); }
+  footer p { margin: 0 0 6px; }
+  footer a { color: var(--fg2); }
+
+  @media (min-width: 900px) {
+    .hero { margin: 0; }
+    .hero img { aspect-ratio: 16 / 9; object-position: 50% 50%; }
+    .intro { position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 42%; padding: 0 0 0 40px; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="logo.svg" alt="">
+    <b>WEATHER / ONE</b>
+    <a href="https://github.com/JJptt1980/weather-one-beta/releases/latest">下載</a>
+  </header>
+
+  <div class="hero">
+    <img src="hero.png" alt="拿著雨傘的人站在手機旁，手機畫面是 WEATHER / ONE 首頁">
+    <div class="intro">
+      <h1>WEATHER / ONE</h1>
+      <div class="sub">MINIMAL WEATHER INTELLIGENCE</div>
+      <p class="tag">一頁看完今天的天氣</p>
+      <p class="tag2">現在幾度、接下來 12 小時、出門該穿什麼。</p>
+      <a class="cta" href="https://github.com/JJptt1980/weather-one-beta/releases/latest">免費下載 Android 版</a>
+      <p class="note">Android 8.0 以上・GitHub 試用版・沒有廣告、不用註冊</p>
+    </div>
+  </div>
+
+  <div class="two">
+    <section>
+      <h2><span>01</span>FEATURES</h2>
+      <ul class="features">
+        <li><b>一頁就夠</b><p>目前天氣、未來 12 小時趨勢、穿衣建議在同一個畫面，不用捲、不用切分頁。</p></li>
+        <li><b>告訴你穿什麼</b><p>依體感溫度、怕冷怕熱、年齡層，用線條人物畫出今天的穿著，附出門、運動、曬衣的最佳時段。</p></li>
+        <li><b>看得到天空</b><p>降雨雷達（台灣附近，氣象署）、雲圖、風場、颱風路徑與地震，平面地圖和地球兩種看法。</p></li>
+        <li><b>乾淨、黑白、不打擾</b><p>黑白線條設計，沒有廣告、不用註冊、不追蹤；字體大小跟著手機系統。</p></li>
+        <li><b>桌面 Widget</b><p>1×1 到 4×4 自動換版面，大尺寸附穿衣人物。</p></li>
+      </ul>
+    </section>
+    <section>
+      <h2><span>02</span>SCREEN</h2>
+      <img class="shot" src="home.png" alt="WEATHER / ONE 首頁截圖：目前天氣、未來 12 小時、穿衣建議" loading="lazy">
+    </section>
+  </div>
+
+  <section>
+    <h2><span>03</span>INSTALL</h2>
+    <ol class="steps">
+      <li>到 <a href="https://github.com/JJptt1980/weather-one-beta/releases/latest">GitHub Releases</a> 下載 <code>weather-one.apk</code>。</li>
+      <li>在手機上打開安裝（第一次要允許「安裝未知應用程式」）。</li>
+      <li>允許「大概位置」就會顯示所在地天氣；不給定位也可以搜尋城市。</li>
+    </ol>
+    <a class="cta" href="https://github.com/JJptt1980/weather-one-beta/releases/latest">下載 weather-one.apk</a>
+    <p class="note">GitHub 版免費試用，之後會在 Google Play 上架。</p>
+  </section>
+
+  <footer>
+    <p>天氣資料：<a href="https://open-meteo.com/">Weather data by Open-Meteo.com</a>（CC BY 4.0）</p>
+    <p>雷達、颱風：交通部中央氣象署開放資料・地震：USGS</p>
+    <p>不收集個人資料，沒有廣告或追蹤。</p>
+  </footer>
+</div>
+</body>
+</html>
